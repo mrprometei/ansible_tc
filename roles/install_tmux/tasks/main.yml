@@ -1,0 +1,12 @@
+---
+# tasks file for install_tmux
+
+- name: Update cache
+  ansible.builtin.apt:
+    update_cache: yes
+
+- name: Install tmux
+  ansible.builtin.apt:
+    name: tmux
+    state: present
+

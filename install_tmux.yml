@@ -1,0 +1,5 @@
+---
+- hosts: docker_master
+  become: yes 
+  roles:
+    - install_tmux 
