@@ -1,0 +1,3 @@
+- name: Prune docker builder
+  community.docker.docker_prune:
+    builder_cache: true

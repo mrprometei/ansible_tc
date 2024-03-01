@@ -1,0 +1,4 @@
+- name: Clean old image
+  ansible.builtin.shell:
+      cmd: docker images -a  | awk 'FNR>1{print $3}' | xargs sudo  docker rmi -f
+  ignore_errors: true

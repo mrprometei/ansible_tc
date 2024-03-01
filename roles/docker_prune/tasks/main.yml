@@ -1,5 +1,10 @@
 ---
-# tasks file for docker_prune
-- name: Prune docker builder 
-  community.docker.docker_prune:
-    builder_cache: true
+
+- name: Docker prune builder
+  include_tasks: docker_builder_prune.yml
+
+- name: Clear old image
+  include_tasks: clear_old_image.yml
+
+
+
